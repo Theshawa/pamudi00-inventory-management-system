@@ -140,8 +140,8 @@
             </div>
         </div>
     </div>
-    <script src="/View/popup.js"></script>
     <?php include("./_inc/scripts.php") ?>
+    <script src="/View/popup.js"></script>
 </body>
 
 </html>
