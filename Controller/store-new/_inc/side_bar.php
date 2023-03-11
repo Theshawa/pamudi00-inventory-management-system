@@ -32,7 +32,7 @@ function render_side_bar($links)
     echo '
         <header>
             <a href="/" class="logo">
-                <img src="' . $GLOBALS["store_path"] . '/_assets/logo.png" alt="Sales Achieved Logo">
+                <img src="' . $GLOBALS["store_assets_path"] . '/logosales.png" alt="Sales Achieved Logo">
             </a>
             <nav class="tab-links">
                 ' . $links_text . '

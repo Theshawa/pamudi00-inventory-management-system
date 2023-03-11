@@ -9,8 +9,8 @@
 <html lang="en">
 <?php render_head(
     title: "Store Manager - Dashboard",
-    children: ' <link rel="stylesheet" href="' . $GLOBALS["store_path"] . '/_styles/home.css">
-                <link rel="stylesheet" href="' . $GLOBALS["store_path"] . '/_styles/popup.css">'
+    children: ' <link rel="stylesheet" href="' . $GLOBALS["store_styles_path"] . '/home.css">
+                <link rel="stylesheet" href="' . $GLOBALS["store_styles_path"] . '/popup.css">'
 ) ?>
 
 <body>
@@ -65,11 +65,11 @@
                 <div class="cards large">
                     <div class="card">
                         <h4>Successful Order Vs. Returned Orders</h4>
-                        <img src="<?php echo $GLOBALS["store_path"] ?>/_assets/graph1.png" alt="">
+                        <img src="<?php echo $GLOBALS["store_assets_path"] ?>/graph1.png" alt="">
                     </div>
                     <div class="card">
                         <h4>Outstanding Payments</h4>
-                        <img src="<?php echo $GLOBALS["store_path"] ?>/_assets/graph2.jpg" alt="">
+                        <img src="<?php echo $GLOBALS["store_assets_path"] ?>/graph2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
             </div>
         </div>
     </div>
-    <script src="<?php echo $GLOBALS["store_path"] ?>/_scripts/popup.js"></script>
+    <script src="/View/popup.js"></script>
     <?php include("./_inc/scripts.php") ?>
 </body>
 

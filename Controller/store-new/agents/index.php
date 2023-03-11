@@ -31,7 +31,7 @@ $agents_result = $conn->query($agents_sql);
 
 <!DOCTYPE html>
 <html lang="en">
-<?php render_head(title: "Agents | Store Manager - Dashboard", children: '<link rel="stylesheet" href="' . $GLOBALS["store_path"] . '/_styles/popup.css">') ?>
+<?php render_head(title: "Agents | Store Manager - Dashboard", children: '<link rel="stylesheet" href="' . $GLOBALS["store_styles_path"] . '/popup.css">') ?>
 
 <body>
     <div class="wrapper">
@@ -106,7 +106,7 @@ $agents_result = $conn->query($agents_sql);
         </div>
     </div>
 
-    <script src="<?php echo $GLOBALS["store_path"] ?>/_scripts/popup.js"></script>
+    <script src="/View/popup.js"></script>
     <?php include("../_inc/scripts.php") ?>
 </body>
 

@@ -6,7 +6,7 @@
         </button>
     </form>
     <div class="user">
-        <img src="<?php echo $GLOBALS["store_path"] ?>/_assets/man.png" width="50px" height="50px" alt="user image">
+        <img src="<?php echo $GLOBALS["store_assets_path"] ?>/man.png" width="50px" height="50px" alt="user image">
         <div>
             <h4>Siril Gajapala</h4>
             <small style="color:rgb(235, 137, 58)">Store Manager</small>
