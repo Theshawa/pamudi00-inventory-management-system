@@ -22,8 +22,15 @@ class Sidebar_Link
                 </a>';
     }
 }
-function render_side_bar($links)
+function render_side_bar($active_link = "")
 {
+    $links = array(
+        new Sidebar_Link(name: "Home", href: $GLOBALS["store_path"], icon: "fa-house", is_active: $active_link === "Home"),
+        new Sidebar_Link(name: "Stocks", href: $GLOBALS["store_path"] . '/stocks', icon: "fa-warehouse", is_active: $active_link === "Stocks"),
+        new Sidebar_Link(name: "Orders", href: $GLOBALS["store_path"] . '/orders', icon: "fa-file-circle-check", is_active: $active_link === "Orders"),
+        new Sidebar_Link(name: "Agents", href: $GLOBALS["store_path"] . '/agents', icon: "fa-user-group", is_active: $active_link === "Agents"),
+        new Sidebar_Link(name: "Returned Goods", href: $GLOBALS["store_path"] . '/returned-goods', icon: "fa-user-group", is_active: $active_link === "Returned Goods"),
+    );
     $links_text = '';
     foreach ($links as $link) {
         $links_text = $links_text . ' ' . $link->render();
@@ -35,6 +42,7 @@ function render_side_bar($links)
                 <img src="' . $GLOBALS["store_assets_path"] . '/logosales.png" alt="Sales Achieved Logo">
             </a>
             <nav class="tab-links">
+            
                 ' . $links_text . '
             </nav>
             <nav class="alt-links">
