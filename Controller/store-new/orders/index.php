@@ -214,13 +214,13 @@ while ($date = mysqli_fetch_assoc($dates_result)) {
                             </tr>
                         </thead>
                         <tbody>';
-                        $products_sql = 'SELECT op.quantity as quantity,p.* FROM `order-product` as op INNER JOIN stocks as p ON op.productId=p.id WHERE op.orderId="' . $id . '"';
+                        $products_sql = 'SELECT op.quantity as o_quantity,p.* FROM `order-product` as op INNER JOIN stocks as p ON op.productId=p.id WHERE op.orderId="' . $id . '"';
                         $result = $conn->query($products_sql);
                         while ($product = mysqli_fetch_assoc($result)) {
                             echo '<tr>';
                             echo '<td style="--width:40%">' . $product["productName"] . '</td>';
                             echo '<td style="--width:35%">' . $product["productCode"] . '</td>';
-                            echo '<td style="--width:25%">' . $product["quantity"] . '</td>';
+                            echo '<td style="--width:25%">' . $product["o_quantity"] . '</td>';
                             echo '</tr>';
                         }
                         echo '   
