@@ -17,7 +17,7 @@
         </main>
     </div>
 
-    <?php include("scripts.php") ?>
+    <?php include("../_inc/scripts.php") ?>
 </body>
 
 </html>
