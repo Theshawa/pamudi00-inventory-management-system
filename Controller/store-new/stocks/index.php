@@ -220,7 +220,7 @@ $stocks_result = $conn->query($stocks_sql);
                 btn.addEventListener("click", () => {
                     const ok = confirm("Are you sure?")
                     if (ok) {
-                        window.location.href = `/Controller/store-new/_lib/delete-product.php?id=${id}`
+                        window.location.href = `<?php echo $GLOBALS["store_path"] ?>/_lib/delete-product.php?id=${id}`
                     }
                 })
             }
