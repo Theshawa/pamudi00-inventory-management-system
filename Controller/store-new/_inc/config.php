@@ -1,4 +1,7 @@
 <?php
-$GLOBALS['store_path'] = "/Controller/store-new";
-$GLOBALS['store_styles_path'] = "/View/styles/store";
-$GLOBALS['store_assets_path'] = "/View/assets";
+
+$app_directory = "pamudi00";
+
+$GLOBALS['store_path'] = "/$app_directory/Controller/store-new";
+$GLOBALS['store_styles_path'] = "/$app_directory/View/styles/store";
+$GLOBALS['store_assets_path'] = "/$app_directory/View/assets";

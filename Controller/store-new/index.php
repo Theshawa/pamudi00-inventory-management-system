@@ -13,6 +13,7 @@
                 <link rel="stylesheet" href="' . $GLOBALS["store_styles_path"] . '/popup.css">'
 ) ?>
 
+
 <body>
     <div class="wrapper">
         <?php render_side_bar("Home") ?>
