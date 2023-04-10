@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . './connect-db.php');
+require_once(__DIR__ . '/connect-db.php');
 require_once('../_inc/config.php');
 
 if (!isset($_GET['id'])) {

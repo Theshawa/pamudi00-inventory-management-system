@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . './connect-db.php');
+require_once(__DIR__ . '/connect-db.php');
 
 if (!(isset($_POST['submit']) && $_POST['submit'] == "add-product")) {
     return;

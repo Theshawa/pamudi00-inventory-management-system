@@ -226,7 +226,7 @@ $stocks_result = $conn->query($stocks_sql);
             }
         })
     </script>
-    <script src="/View/popup.js"></script>
+    <script src="<?php echo $GLOBALS['store_view_path'] ?>/popup.js"></script>
     <?php include("../_inc/scripts.php") ?>
 </body>
 

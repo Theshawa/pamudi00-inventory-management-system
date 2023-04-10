@@ -98,15 +98,8 @@ $agents_result = $conn->query($agents_sql);
         </div>
     </div>
 
-    <script src="/View/popup.js"></script>
+    <script src="<?php echo $GLOBALS['store_view_path'] ?>/popup.js"></script>
     <?php include("../_inc/scripts.php") ?>
 </body>
 
 </html>
-
-<!-- anushasakawaru
-4
-
-5(nirmartru haa sabhapathi)
-
-Add FRONT to logo -->

@@ -292,7 +292,7 @@ while ($date = mysqli_fetch_assoc($dates_result)) {
         }
     </script>
 
-    <script src="/View/popup.js"></script>
+    <script src="<?php echo $GLOBALS['store_view_path'] ?>/popup.js"></script>
     <?php include("../_inc/scripts.php") ?>
 </body>
 

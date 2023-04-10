@@ -134,7 +134,7 @@
         </div>
     </div>
     <?php include("./_inc/scripts.php") ?>
-    <script src="/View/popup.js"></script>
+    <script src="<?php echo $GLOBALS['store_view_path'] ?>/popup.js"></script>
 </body>
 
 </html>
