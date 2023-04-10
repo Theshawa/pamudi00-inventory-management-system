@@ -6,13 +6,13 @@ if (!(isset($_POST['submit']) && $_POST['submit'] == "update-product")) {
     return;
 }
 
-$id = $_POST["id"];
-$name = $_POST["name"];
-$category = $_POST["category"];
-$code = $_POST["code"];
-$buying_price = $_POST["buying_price"];
-$selling_price = $_POST["selling_price"];
-$qty = $_POST["qty"];
+$id = $_POST["p_id"];
+$name = $_POST["p_name"];
+$category = $_POST["p_category"];
+$code = $_POST["p_code"];
+$buying_price = $_POST["p_buying_price"];
+$selling_price = $_POST["p_selling_price"];
+$qty = $_POST["p_qty"];
 
 unset($_POST);
 
