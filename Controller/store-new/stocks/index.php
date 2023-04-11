@@ -75,11 +75,13 @@ $stocks_result = $conn->query($stocks_sql);
                         $buying_price = $row["buyingPrice"];
                         $selling_price = $row["sellingPrice"];
                         $qty = $row["quantity"];
+                        $min_qty_treshold = $row["minQuantityTreshold"];
                         echo '<div class="cta">
                                 <div>
                                     <h4>' . $name . '</h4>
                                     <small>' . $code . '</small>
                                     <small>' . $category . '</small>
+                                    ' . ($qty <= $min_qty_treshold ? '<span class="badge-danger">Min Quanity Treshold Reached</span>' : '') . '
                                 </div>
                                 <div>
                                     <button class="popup-btn" popup-target="view-product-' . $id . '"><i class="fa-solid fa-eye"></i><span>&nbsp;View</span></button>
@@ -117,6 +119,7 @@ $stocks_result = $conn->query($stocks_sql);
                                 <div class="data-cta">
                                     <small>Quantity</small>
                                     <h4>' . $qty . '</h4>
+                                    ' . ($qty <= $min_qty_treshold ? '<span class="badge-danger">Min Quanity Treshold Reached</span>' : '') . '
                                 </div>
                             </div>
                         </div>
@@ -153,6 +156,11 @@ $stocks_result = $conn->query($stocks_sql);
                                 <span>Quantity </span>
                                 <input defaultValue="' . $qty . '" value="' . $qty . '" type="number" name="p_qty" placeholder="" min="0" required>
                             </label>
+                            <label for="" class="input">
+                                <span>Min Quantity Treshold</span>
+                                <input defaultValue="' . $min_qty_treshold . '" value="' . $min_qty_treshold . '" type="number" name="p_min_qty_treshold" placeholder="" min="0" required>
+                            </label>
+                            <div></div>
                             <input type="hidden" name="p_id" value="' . $id . '"/>
                             <button class="disabled" type="reset">Cancel</button>
                             <button class="main" type="submit" name="submit" value="update-product">Save</button>
@@ -205,6 +213,11 @@ $stocks_result = $conn->query($stocks_sql);
                             <span>Quantity </span>
                             <input type="number" name="p_qty" placeholder="" min="0" required>
                         </label>
+                        <label for="" class="input">
+                            <span>Min Quantity Treshold</span>
+                            <input type="number" name="p_min_qty_treshold" placeholder="" min="0" required>
+                        </label>
+                        <div></div>
                         <button class="disabled" type="reset">Cancel</button>
                         <button class="main" type="submit" name="submit" value="add-product">Save</button>
                     </form>

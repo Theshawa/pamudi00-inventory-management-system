@@ -100,6 +100,10 @@
                         <span>Quantity </span>
                         <input type="number" name="p_qty" placeholder="" min="0" required>
                     </label>
+                    <label for="" class="input">
+                        <span>Min Quantity Treshold</span>
+                        <input type="number" name="p_min_qty_treshold" placeholder="" min="0" required>
+                    </label>
                     <button class="disabled" type="reset">Cancel</button>
                     <button class="main" type="submit" name="submit" value="add-product">Save</button>
                 </form>
