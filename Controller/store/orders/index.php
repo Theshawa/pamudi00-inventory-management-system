@@ -137,6 +137,7 @@ while ($date = mysqli_fetch_assoc($dates_result)) {
                 }
                 if ($orders_result) {
                     while ($row = mysqli_fetch_assoc($orders_result)) {
+
                         $date = $row["orderDate"];
                         $id = $row["orderID"];
                         $details = $row["orderDetails"];
@@ -232,7 +233,7 @@ while ($date = mysqli_fetch_assoc($dates_result)) {
                         echo '</div>
                         </div>
                     </div>';
-                        if ($status === "pending") {
+                        if ($status === "Pending") {
                             echo '<div class="popup" id="update-order-' . $id . '">
                                 <div class="container">
                                     <div class="header">
